@@ -392,7 +392,7 @@
                                                                 <br /> 
                                                                 <br />
                                                                 <% for(var i = 0; i < push.commits.length; i++) {%>
-                                                                  <h4 class="h4">Commit <%= push.commits[i].id %> : <%= push.commits[i].message %> (<%= push.commits[i].timestamp %>)</h4>
+                                                                  <h4 class="h4"><a href="<%=  push.commits[i].url %>">Commit <%= push.commits[i].id %></a> : <%= push.commits[i].message %> (<%= push.commits[i].timestamp %>)</h4>
                                                                   <hr />
                                                                 <% } %>
                                                             </div>
