@@ -1,4 +1,3 @@
-require('newrelic');
 var express = require('express');
 var mailer = require('express-mailer');
 var engine = require('ejs').__express;
