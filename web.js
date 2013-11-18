@@ -1,3 +1,4 @@
+require('newrelic');
 var express = require('express');
 var mailer = require('express-mailer');
 var engine = require('ejs').__express;
@@ -35,7 +36,7 @@ app.post('/commit', function(request, response){
   push = request.body;
   subject = '[gitlab push][' + push.repository.name + '][' + push.user_name + ']' 
   app.mailer.send('push', {
-    to: 'cons@ekino.com', 
+    to: 'cons@ekino.com, guerrin@ekino.com', 
     subject: subject,
     push: push 
   }, function (err) {
