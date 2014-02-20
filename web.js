@@ -35,7 +35,7 @@ app.post('/commit', function(request, response){
   push = request.body;
   subject = '[gitlab push][' + push.repository.name + '][' + push.user_name + ']' 
   app.mailer.send('push', {
-    to: 'cons@ekino.com, guerrin@ekino.com', 
+    to: 'noreply@noreply.com', 
     subject: subject,
     push: push 
   }, function (err) {
